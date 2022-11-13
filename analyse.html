@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module analyse</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>analyse</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/analyse.py">/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/analyse.py</a></font></td></tr></table>
+    <p><tt>A00304351<br>
+Functions&nbsp;to&nbsp;analyse&nbsp;lists&nbsp;aggregated&nbsp;from&nbsp;source&nbsp;file.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="stats.html">stats</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-analyse_subcategory"><strong>analyse_subcategory</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Analyse&nbsp;and&nbsp;display&nbsp;sub-category&nbsp;data&nbsp;on&nbsp;percentage&nbsp;of&nbsp;employees<br>
+impacted.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Returns<br>
+-------<br>
+percentage_impacted_by_company_size&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;statistics&nbsp;on&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted<br>
+&nbsp;&nbsp;&nbsp;&nbsp;based&nbsp;on&nbsp;company&nbsp;size.</tt></dd></dl>
+ <dl><dt><a name="-avg_impacted_in_subs"><strong>avg_impacted_in_subs</strong></a>(size_to_impacted)</dt><dd><tt>Get&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;<br>
+employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+size_to_impacted&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;list&nbsp;of&nbsp;percentages&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+size_to_avg&nbsp;:&nbsp;TYPE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+ <dl><dt><a name="-company_size_least_layoff_announcements"><strong>company_size_least_layoff_announcements</strong></a>(company_size_to_layoff_announcements)</dt><dd><tt>Get&nbsp;company&nbsp;size&nbsp;that&nbsp;has&nbsp;had&nbsp;the&nbsp;least&nbsp;layoff&nbsp;announcements.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_to_layoff_announcements&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;per&nbsp;company&nbsp;size.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Returns<br>
+-------<br>
+string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;of&nbsp;company&nbsp;size&nbsp;with&nbsp;lowest&nbsp;number&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+ <dl><dt><a name="-company_size_most_layoff_announcements"><strong>company_size_most_layoff_announcements</strong></a>(company_size_to_layoff_announcements)</dt><dd><tt>Get&nbsp;company&nbsp;size&nbsp;that&nbsp;has&nbsp;had&nbsp;the&nbsp;most&nbsp;layoff&nbsp;announcements.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_to_layoff_announcements&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;per&nbsp;company&nbsp;size.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;of&nbsp;company&nbsp;size&nbsp;with&nbsp;highest&nbsp;number&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+ <dl><dt><a name="-format_count_outputs"><strong>format_count_outputs</strong></a>(sub_cat, value)</dt><dd><tt>Format&nbsp;sub&nbsp;category&nbsp;and&nbsp;value.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+sub_cat&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Specifier&nbsp;within&nbsp;sub-category.<br>
+value&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numeric&nbsp;value.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;eg&nbsp;"sub-category-specifier&nbsp;(value)".</tt></dd></dl>
+ <dl><dt><a name="-format_pct_outputs"><strong>format_pct_outputs</strong></a>(sub_cat, value)</dt><dd><tt>Format&nbsp;sub&nbsp;category&nbsp;and&nbsp;value&nbsp;with&nbsp;percentage&nbsp;sign.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+sub_cat&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Specifier&nbsp;within&nbsp;sub-category.<br>
+value&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numeric&nbsp;value.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;eg&nbsp;"sub-category-specifier&nbsp;(value%)".</tt></dd></dl>
+ <dl><dt><a name="-highest_avg"><strong>highest_avg</strong></a>(size_to_avg)</dt><dd><tt>Get&nbsp;the&nbsp;highest&nbsp;average&nbsp;percentage&nbsp;from&nbsp;the&nbsp;dictionary<br>
+of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;<br>
+impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+size_to_avg&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+TYPE&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;of&nbsp;company&nbsp;size&nbsp;with&nbsp;highest&nbsp;average<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+ <dl><dt><a name="-layoff_announcements_per_company_size"><strong>layoff_announcements_per_company_size</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Get&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;<br>
+per&nbsp;company&nbsp;size.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;TYPE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+company_size_to_layoff_announcements&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;per&nbsp;company&nbsp;size.</tt></dd></dl>
+ <dl><dt><a name="-lowest_avg"><strong>lowest_avg</strong></a>(size_to_avg)</dt><dd><tt>Get&nbsp;the&nbsp;lowest&nbsp;average&nbsp;percentage&nbsp;from&nbsp;the&nbsp;dictionary<br>
+of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;<br>
+impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+size_to_avg&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;average&nbsp;percentage&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+TYPE&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Formatted&nbsp;string&nbsp;of&nbsp;company&nbsp;size&nbsp;with&nbsp;lowest&nbsp;average<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+ <dl><dt><a name="-split_pct_impacted_into_subs"><strong>split_pct_impacted_into_subs</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Get&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;list&nbsp;of&nbsp;percentages&nbsp;of&nbsp;<br>
+employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;announcement.<br>
+Returns<br>
+-------<br>
+size_to_impacted&nbsp;:&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;of&nbsp;company&nbsp;size&nbsp;to&nbsp;list&nbsp;of&nbsp;percentages&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;employees&nbsp;impacted&nbsp;by&nbsp;layoffs&nbsp;announced.</tt></dd></dl>
+</td></tr></table>
+</body></html>

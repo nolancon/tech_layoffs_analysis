@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module estimate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>estimate</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/estimate.py">/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/estimate.py</a></font></td></tr></table>
+    <p><tt>Helper&nbsp;functions&nbsp;to&nbsp;get&nbsp;numeric&nbsp;data,&nbsp;estimating&nbsp;when&nbsp;necessary</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="stats.html">stats</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-estimate_num_employees"><strong>estimate_num_employees</strong></a>(company_size)</dt><dd><tt>Estimate&nbsp;number&nbsp;of&nbsp;employees&nbsp;based&nbsp;on&nbsp;company&nbsp;size.<br>
+An&nbsp;estimate&nbsp;is&nbsp;the&nbsp;mean&nbsp;of&nbsp;min&nbsp;and&nbsp;max&nbsp;employees&nbsp;as<br>
+described&nbsp;by&nbsp;company&nbsp;size&nbsp;(eg&nbsp;101-250).<br>
+Max&nbsp;company&nbsp;size&nbsp;(10000+)&nbsp;estimate&nbsp;defaults&nbsp;to&nbsp;10000.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Size&nbsp;of&nbsp;company&nbsp;announcing&nbsp;layoffs..<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Estimated&nbsp;company&nbsp;size.</tt></dd></dl>
+ <dl><dt><a name="-estimate_num_layoffs"><strong>estimate_num_layoffs</strong></a>(percentage_impacted, company_size)</dt><dd><tt>Estimate&nbsp;the&nbsp;number&nbsp;of&nbsp;employees&nbsp;layed&nbsp;off&nbsp;based&nbsp;on<br>
+number&nbsp;on&nbsp;the&nbsp;percentage&nbsp;impacted&nbsp;and&nbsp;estimated&nbsp;company&nbsp;size.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+percentage_impacted&nbsp;:&nbsp;TYPE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentage&nbsp;of&nbsp;employees&nbsp;impacted.<br>
+company_size&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Size&nbsp;of&nbsp;company&nbsp;announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Estimated&nbsp;number&nbsp;of&nbsp;emplyees&nbsp;layed&nbsp;off.</tt></dd></dl>
+ <dl><dt><a name="-estimate_percentage_impacted"><strong>estimate_percentage_impacted</strong></a>(num_layoffs, company_size)</dt><dd><tt>Estimate&nbsp;the&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;based&nbsp;on<br>
+number&nbsp;of&nbsp;layoffs&nbsp;and&nbsp;estimated&nbsp;company&nbsp;size.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+num_layoffs&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;layoffs&nbsp;announced.<br>
+company_size&nbsp;:&nbsp;TYPE<br>
+&nbsp;&nbsp;&nbsp;Size&nbsp;of&nbsp;company&nbsp;announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Estimated&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted.</tt></dd></dl>
+ <dl><dt><a name="-get_num_layoffs"><strong>get_num_layoffs</strong></a>(num_layoffs, percentage_impacted, company_size)</dt><dd><tt>Get&nbsp;the&nbsp;number&nbsp;of&nbsp;layoffs&nbsp;for&nbsp;the&nbsp;company.&nbsp;Estimate&nbsp;based<br>
+on&nbsp;percentage&nbsp;impacted&nbsp;and&nbsp;company&nbsp;size&nbsp;if&nbsp;number&nbsp;of&nbsp;layoffs<br>
+has&nbsp;not&nbsp;been&nbsp;specified.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+num_layoffs&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;layoffs&nbsp;announced.<br>
+percentage_impacted&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentage&nbsp;of&nbsp;employees&nbsp;impacted.<br>
+company_size&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Size&nbsp;of&nbsp;company&nbsp;announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;employees&nbsp;layed&nbsp;off.</tt></dd></dl>
+ <dl><dt><a name="-get_percentage_impacted"><strong>get_percentage_impacted</strong></a>(num_layoffs, percentage_impacted, company_size)</dt><dd><tt>Get&nbsp;the&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;at&nbsp;the&nbsp;company&nbsp;impacted&nbsp;by&nbsp;the<br>
+layoff&nbsp;announcement.&nbsp;Estimiate&nbsp;based&nbsp;on&nbsp;number&nbsp;of&nbsp;layoffs&nbsp;and&nbsp;<br>
+company&nbsp;size&nbsp;if&nbsp;percentage&nbsp;impacted&nbsp;has&nbsp;not&nbsp;been&nbsp;specified.<br>
+Parameters<br>
+----------<br>
+num_layoffs&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;layoffs&nbsp;announced.<br>
+percentage_impacted&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentage&nbsp;of&nbsp;employees&nbsp;impacted.<br>
+company_size&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Size&nbsp;of&nbsp;company&nbsp;announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentage&nbsp;of&nbsp;employees&nbsp;impacted.</tt></dd></dl>
+ <dl><dt><a name="-get_total_funding"><strong>get_total_funding</strong></a>(total_funding)</dt><dd><tt>Get&nbsp;the&nbsp;company's&nbsp;total&nbsp;funding&nbsp;amount&nbsp;in&nbsp;dollars.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+total_funding&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;funding&nbsp;received&nbsp;by&nbsp;a&nbsp;company&nbsp;in&nbsp;millions&nbsp;of&nbsp;dollars.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;funding&nbsp;received&nbsp;by&nbsp;a&nbsp;company&nbsp;in&nbsp;dollars.</tt></dd></dl>
+ <dl><dt><a name="-total_funding_in_millions"><strong>total_funding_in_millions</strong></a>(total_funding_list)</dt><dd><tt>Get&nbsp;alist&nbsp;of&nbsp;total&nbsp;funding&nbsp;amounts&nbsp;in&nbsp;millions&nbsp;of&nbsp;dollars.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+total_funding_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;total&nbsp;fundings&nbsp;received&nbsp;by&nbsp;companies&nbsp;in&nbsp;dollars.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+total_funding_list_in_millions&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;total&nbsp;fundings&nbsp;received&nbsp;by&nbsp;companies&nbsp;in&nbsp;millions&nbsp;of&nbsp;dollars.</tt></dd></dl>
+</td></tr></table>
+</body></html>

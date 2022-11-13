@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module visualise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>visualise</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/visualise.py">/root/go_projects/src/github.com/nolancon/tech_layoffs_analysis/visualise.py</a></font></td></tr></table>
+    <p><tt>A00304351<br>
+Functions&nbsp;to&nbsp;display&nbsp;visualisations&nbsp;such&nbsp;as&nbsp;charts,&nbsp;plots&nbsp;etcd</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="analyse.html">analyse</a><br>
+</td><td width="25%" valign=top><a href="estimate.html">estimate</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-announcements_per_size_pie_chart"><strong>announcements_per_size_pie_chart</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Display&nbsp;a&nbsp;pie-chart&nbsp;of&nbsp;layoff&nbsp;announcements&nbsp;per&nbsp;company&nbsp;size.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-avg_percentage_impacted_per_size_bar_chart"><strong>avg_percentage_impacted_per_size_bar_chart</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Display&nbsp;bar&nbsp;chart&nbsp;of&nbsp;company&nbsp;size&nbsp;versus&nbsp;average&nbsp;percentage<br>
+of&nbsp;employees&nbsp;impacted.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-avg_percentage_impacted_per_size_box_plots"><strong>avg_percentage_impacted_per_size_box_plots</strong></a>(company_size_list, percentage_impacted_list)</dt><dd><tt>Display&nbsp;multiple&nbsp;box-plots&nbsp;of&nbsp;company&nbsp;size&nbsp;versus&nbsp;average&nbsp;percentage<br>
+of&nbsp;employees&nbsp;impacted.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+company_size_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;sizes&nbsp;of&nbsp;companies&nbsp;announcing&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-impacted_per_funding_scatter_plot"><strong>impacted_per_funding_scatter_plot</strong></a>(total_funding_list, percentage_impacted_list)</dt><dd><tt>Display&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted<br>
+per&nbsp;layoff&nbsp;announcement&nbsp;versus&nbsp;total&nbsp;funding&nbsp;received&nbsp;by&nbsp;company<br>
+announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+total_funding_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;total&nbsp;fnudings&nbsp;received&nbsp;by&nbsp;companys&nbsp;announcing&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layoffs.<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-percentage_impacted_box_plot"><strong>percentage_impacted_box_plot</strong></a>(percentage_impacted_list)</dt><dd><tt>Display&nbsp;a&nbsp;box&nbsp;plot&nbsp;of&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;<br>
+layoff&nbsp;announcement.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-percentage_impacted_hist"><strong>percentage_impacted_hist</strong></a>(percentage_impacted_list)</dt><dd><tt>Display&nbsp;a&nbsp;histogram&nbsp;of&nbsp;percentage&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;<br>
+layoff&nbsp;announcement.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+percentage_impacted_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;percentages&nbsp;of&nbsp;employees&nbsp;impacted&nbsp;per&nbsp;layoff&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;announcement.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-total_funding_box_plot"><strong>total_funding_box_plot</strong></a>(total_funding_list)</dt><dd><tt>Display&nbsp;a&nbsp;box-plot&nbsp;of&nbsp;total&nbsp;funding&nbsp;received&nbsp;by&nbsp;company<br>
+announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+total_funding_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;total&nbsp;fnudings&nbsp;received&nbsp;by&nbsp;companys&nbsp;announcing&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-total_funding_hist"><strong>total_funding_hist</strong></a>(total_funding_list)</dt><dd><tt>Display&nbsp;a&nbsp;histogram&nbsp;of&nbsp;total&nbsp;funding&nbsp;received&nbsp;by&nbsp;company<br>
+announcing&nbsp;layoffs.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+total_funding_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;total&nbsp;fnudings&nbsp;received&nbsp;by&nbsp;companys&nbsp;announcing&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layoffs.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+</td></tr></table>
+</body></html>
