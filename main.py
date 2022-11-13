@@ -27,4 +27,9 @@ visualise.total_funding_box_plot(total_funding_list)
 visualise.impacted_per_funding_scatter_plot(total_funding_list, percentage_impacted_list)
 
 # Pie-chart of layoff announcements per company size
-visualise.percentage_impacted_pie_chart(company_size_list, percentage_impacted_list)
+visualise.announcements_per_size_pie_chart(company_size_list, percentage_impacted_list)
+
+# Bar-chart of average % impacted per company size
+visualise.avg_percentage_impacted_per_size_bar_chart(company_size_list, percentage_impacted_list)
+
+visualise.avg_percentage_impacted_per_size_box_plots(company_size_list, percentage_impacted_list)
