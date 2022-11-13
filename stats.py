@@ -20,7 +20,7 @@ def calc_mean(numbers):
         The mean of the list of numbers.
     """
     return float(sum(numbers)/len(numbers))
-
+  
 def calc_median(numbers):
     """
     Calculate the median of the numbers in the list.
