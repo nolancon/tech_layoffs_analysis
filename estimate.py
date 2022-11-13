@@ -157,3 +157,23 @@ def get_total_funding(total_funding):
         return float(int(total_funding)*1000000)
     except:
         return 0
+
+def total_funding_in_millions(total_funding_list):
+    """
+    Get alist of total funding amounts in millions of dollars.
+
+    Parameters
+    ----------
+    total_funding_list : list
+        List of total fundings received by companies in dollars.
+
+    Returns
+    -------
+    total_funding_list_in_millions : list
+        List of total fundings received by companies in millions of dollars.
+
+    """
+    total_funding_list_in_millions = []
+    for total_funding in total_funding_list:
+        total_funding_list_in_millions.append(total_funding/1000000)
+    return total_funding_list_in_millions

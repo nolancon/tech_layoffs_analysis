@@ -1,8 +1,9 @@
 """
+A00304351
 Functions to display visualisations such as charts, plots etcd
 """
 
-import analyse, sanitise, matplotlib.pyplot as plt
+import analyse, estimate, matplotlib.pyplot as plt
 
 def percentage_impacted_hist(percentage_impacted_list):
     """
@@ -73,7 +74,7 @@ def impacted_per_funding_scatter_plot(total_funding_list, percentage_impacted_li
     ax.set_title("Tech Layoffs US 2022")
     ax.set_xlabel("Total Funding (millions $)")
     ax.set_ylabel("Employees Impacted per Layoff Announcement (%)")
-    ax.scatter(sanitise.total_funding_in_millions(total_funding_list),percentage_impacted_list)
+    ax.scatter(estimate.total_funding_in_millions(total_funding_list),percentage_impacted_list)
     plt.show()
     
 def total_funding_hist(total_funding_list):
@@ -96,7 +97,7 @@ def total_funding_hist(total_funding_list):
     ax.set_title("Total Funding Received")
     ax.set_xlabel("Total Funding (millions $)")
     ax.set_ylabel("Number of Layoff Announcements")
-    ax.hist(sanitise.total_funding_in_millions(total_funding_list))
+    ax.hist(estimate.total_funding_in_millions(total_funding_list))
     plt.show()
 
 def total_funding_box_plot(total_funding_list):
@@ -118,7 +119,7 @@ def total_funding_box_plot(total_funding_list):
     fig, ax = plt.subplots()
     ax.set_title("Tech Layoffs US 2022 (Excluding Outliers)")
     ax.set_ylabel("Total Funding of Company Announcing Layoffs (millions $)")
-    ax.boxplot(sanitise.total_funding_in_millions(total_funding_list), showfliers=False)
+    ax.boxplot(estimate.total_funding_in_millions(total_funding_list), showfliers=False)
     plt.show()
 
 def announcements_per_size_pie_chart(company_size_list, percentage_impacted_list):

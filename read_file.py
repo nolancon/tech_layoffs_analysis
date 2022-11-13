@@ -1,8 +1,9 @@
 """
+A00304351
 Function to read data from csv file and store in useful lists for analysis.
 """
 
-import sys, sanitise
+import sys, estimate
 
 file_path = "tech_layoffs_us_2022.csv"
 
@@ -30,8 +31,8 @@ def read():
         for line in data_file:
             _, num_layoffs, percentage_impacted, _, _, _, _, _, total_funding, company_size = line.split(",")
             # we need to sanitise the numeric data 
-            total_funding = sanitise.get_total_funding(total_funding)
-            percentage_impacted = sanitise.get_percentage_impacted(num_layoffs.strip(), percentage_impacted.strip(), company_size.strip())
+            total_funding = estimate.get_total_funding(total_funding)
+            percentage_impacted = estimate.get_percentage_impacted(num_layoffs.strip(), percentage_impacted.strip(), company_size.strip())
             # ignore invalid numeric entries as the will skew the data.
             if total_funding == 0 or percentage_impacted == 0:
                 continue
