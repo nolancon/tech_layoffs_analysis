@@ -1,14 +1,26 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Nov 12 20:47:37 2022
+Function to read data from csv file and store in useful lists for analysis.
+"""
 
-@author: cmsno
-"""
 import sys, sanitise
 
 file_path = "tech_layoffs_us_2022.csv"
 
 def read():
+    """
+    Reads the csv file "tech_layoffs_us_2022.csv" and parses data into
+    relevant lists for ananlysis
+
+    Returns
+    -------
+    company_size_list : list
+        List of company sizes announcing layoffs.
+    total_funding_list : list
+        List of total fundings received by companies annonuncing layoffs.
+    percentage_impacted_list : list
+        List of percentages of employees impacted by announced layoffs.
+
+    """
     total_funding_list = []
     percentage_impacted_list = []
     company_size_list = []

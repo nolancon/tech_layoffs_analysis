@@ -1,5 +1,6 @@
-# Program to show data related to tech layoffs in the USA during 2022
-
+"""
+Program to show data related to tech layoffs in the USA during 2022
+"""
 import display, analyse, read_file, visualise
 
 # Read data from csv file
@@ -32,4 +33,5 @@ visualise.announcements_per_size_pie_chart(company_size_list, percentage_impacte
 # Bar-chart of average % impacted per company size
 visualise.avg_percentage_impacted_per_size_bar_chart(company_size_list, percentage_impacted_list)
 
+# Box-plots of % impacted per company size
 visualise.avg_percentage_impacted_per_size_box_plots(company_size_list, percentage_impacted_list)
