@@ -10,26 +10,12 @@ import stats
 def analyse_subcategory(company_size_list, percentage_impacted_list):
     percentage_impacted_by_company_size = {}
     percentage_impacted_by_company_size["Number of Company Sizes"] = len(set(company_size_list))
-    percentage_impacted_by_company_size["Company Size with Most Layoff Announcements"] = company_size_most_occurrences(company_size_list)
-    percentage_impacted_by_company_size["Company Size with Least Layoff Announcements"] = company_size_least_occurrences(company_size_list)    
+    percentage_impacted_by_company_size["Company Size with Most Layoff Announcements"] = company_size_most_layoff_announcements(layoff_announcements_per_company_size(company_size_list, percentage_impacted_list))
+    percentage_impacted_by_company_size["Company Size with Least Layoff Announcements"] = company_size_least_layoff_announcements(layoff_announcements_per_company_size(company_size_list, percentage_impacted_list))    
     percentage_impacted_by_company_size["Company Size with Highest Average Percentage of Impacted Employees"] = highest_avg(avg_impacted_in_subs(split_pct_impacted_into_subs(company_size_list, percentage_impacted_list)))
     percentage_impacted_by_company_size["Company Size with Lowest Average Percentage of Impacted Employees"] = lowest_avg(avg_impacted_in_subs(split_pct_impacted_into_subs(company_size_list, percentage_impacted_list)))
     return percentage_impacted_by_company_size
 
-def company_size_most_occurrences(company_size_list):
-    uniques = set(company_size_list)
-    frequencies = [ company_size_list.count(value) for value in uniques ]
-    max_freq = max(frequencies)
-    max_freq_index = frequencies.index(max_freq)
-    return format_count_outputs(company_size_list[max_freq_index], max_freq)
-            
-def company_size_least_occurrences(company_size_list):
-    uniques = set(company_size_list)
-    frequencies = [ company_size_list.count(value) for value in uniques ]
-    min_freq = min(frequencies)
-    min_freq_index = frequencies.index(min_freq)
-    return format_count_outputs(company_size_list[min_freq_index], min_freq)
-    
 def split_pct_impacted_into_subs(company_size_list, percentage_impacted_list):     
     size_to_impacted = {}
     unique_company_sizes = set(company_size_list) 
@@ -69,9 +55,35 @@ def lowest_avg(size_to_avg):
             company_size_with_lowest_avg = company_size
     
     return format_pct_outputs(company_size_with_lowest_avg, lowest_avg)
-    
+
+def layoff_announcements_per_company_size(company_size_list, percentage_impacted_list):
+    company_size_to_layoff_announcements = {}
+    company_size_to_pcts_impacted =  split_pct_impacted_into_subs(company_size_list, percentage_impacted_list)
+    for key in company_size_to_pcts_impacted:
+        company_size_to_layoff_announcements[key] = len(company_size_to_pcts_impacted[key])
+    return company_size_to_layoff_announcements
+
+def company_size_most_layoff_announcements(company_size_to_layoff_announcements):
+    most_layoffs = 0
+    most_layoffs_company_size = ""
+    for key in company_size_to_layoff_announcements:
+        if company_size_to_layoff_announcements[key] > most_layoffs:
+            most_layoffs = company_size_to_layoff_announcements[key]
+            most_layoffs_company_size = key
+    return format_count_outputs(most_layoffs_company_size, most_layoffs)
+
+def company_size_least_layoff_announcements(company_size_to_layoff_announcements):
+    # set unrealistically high initial vaule
+    least_layoffs = 1000000 
+    least_layoffs_company_size = ""
+    for key in company_size_to_layoff_announcements:
+        if company_size_to_layoff_announcements[key] < least_layoffs:
+            least_layoffs = company_size_to_layoff_announcements[key]
+            least_layoffs_company_size = key
+    return format_count_outputs(least_layoffs_company_size, least_layoffs)
+
 def format_count_outputs(sub_cat, value):
-    return str(sub_cat + " (" + str(value) + ")")
+    return str(str(sub_cat) + " (" + str(value) + ")")
 
 def format_pct_outputs(sub_cat, value):
-    return str(sub_cat + " (" + str(value) + "%)")               
+    return str(str(sub_cat) + " (" + str(value) + "%)")               

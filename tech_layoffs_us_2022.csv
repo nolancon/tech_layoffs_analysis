@@ -19,7 +19,7 @@ Aspire,23,Unclear,15/07/2022,Marketing,San Francisco,Private,Series A,27,51-100
 Aura,70,9.00%,24/06/2022,Security,Boston,Private,Series F,501,501-1000
 Automox,Unclear,11.00%,18/04/2022,Security,Boulder,Private,Series C,153,51-100
 AvantStay,80,Unclear,29/06/2022,Travel,Los Angeles,Private,Private Equity,686,251-500
-Baton,16,25.00%,29/06/2022,Transporation,San Francisco,Private,Series A,14,1-10
+Baton,16,25.00%,29/06/2022,Transporation,San Francisco,Private,Series A,14,11-50
 Beachbody,70,10.00%,27/01/2022,Fitness,Santa Monica,Public,Post-IPO Equity,234,501-1000
 Beyond Meat,40,Unclear,03/08/2022,Food,Manhattan Beach CA,Public,Series G,122,501-1000
 BigBear.ai,Unclear,7.00%,08/09/2022,Data,Columbia MD,Public,Post-IPO Debt,200,501-1000
@@ -30,7 +30,7 @@ Blend,220,25.00%,15/08/2022,Finance,San Francisco,Public,Secondary Market,665,50
 BlockFi,170,20.00%,13/06/2022,Crypto,Jersey City,Private,Debt Financing,1400,501-1000
 Bolt,250,33.00%,25/05/2022,Finance,San Francisco,Private,Series E,972,501-1000
 Boosted Commerce,Unclear,5.00%,25/07/2022,Retail,Los Angeles,Private,Series A,137,101-250
-Brave Care,40,33.00%,06/09/2022,Healthcare,Portland,Private,Series B,43,1-10
+Brave Care,40,33.00%,06/09/2022,Healthcare,Portland,Private,Series B,43,101-250
 Bright Machines,30,8.00%,28/06/2022,Data,San Francisco,Private,Series B,251,251-500
 Butler Hospitality,1000,100.00%,08/07/2022,Food,New York,Private,Series B,50,501-1000
 Buzzer,Unclear,20.00%,20/06/2022,Media,New York,Private,Series A,24,11-50
@@ -153,7 +153,7 @@ Modsy,Unclear,Unclear,29/06/2022,Retail,San Francisco,Private,Series C,73,251-50
 Mural,90,Unclear,06/05/2022,Product,San Francisco,Private,Series C,192,501-1000
 Nate,30,Unclear,30/08/2022,Retail,New York,Private,Series A,47,101-250
 Nayya,16,15.00%,17/06/2022,Other,New York,Private,Series C,106,101-250
-Netflix,480,Unclear,14/09/2022,Media,Los Gatos,Public,Post-IPO Debt,122000,1001-5000
+Netflix,480,Unclear,14/09/2022,Media,Los Gatos,Public,Post-IPO Debt,122,1001-5000
 New Relic,110,5.00%,18/08/2022,Finance,Bay Area CA,Public,Post-IPO Equity,215,1001-5000
 Next Insurance,150,17.00%,07/07/2022,Finance,Palo Alto,Private,Series E,881,251-500
 Nextbite,Unclear,Unclear,08/07/2022,Food,Denver,Private,Series C,151,101-250
