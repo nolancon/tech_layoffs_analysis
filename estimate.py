@@ -1,5 +1,6 @@
 """
- Helper functions to get numeric data, estimating when necessary 
+A00304351
+Helper functions to get numeric data, estimating when necessary 
 """
 
 import stats
