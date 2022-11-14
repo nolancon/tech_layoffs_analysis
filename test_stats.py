@@ -27,7 +27,7 @@ def test_calc_range():
 def test_calc_iqr():
     assert stats.calc_iqr([1,2,3,4,5]) == 3.0
     assert stats.calc_iqr([9, 44, 89, 88, 48, 82, 59, 83, 3, 45]) == 39.0
-    assert stats.calc_iqr([-1, 1]) == 0
+    assert stats.calc_iqr([-1, 1]) == 2.0
 
 def test_calc_std_dev():
     assert stats.calc_std_dev([1,2,3,4,5]) == 1.5811388300841898
