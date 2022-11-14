@@ -1,0 +1,9 @@
+{
+  "test_stats.py::test_calc_correlation": true, 
+  "test_stats.py::test_calc_iqr": true, 
+  "test_stats.py::test_calc_mean": true, 
+  "test_stats.py::test_calc_median": true, 
+  "test_stats.py::test_calc_median_skewness": true, 
+  "test_stats.py::test_calc_mode_skewness": true, 
+  "test_stats.py::test_calc_std_dev": true
+}
